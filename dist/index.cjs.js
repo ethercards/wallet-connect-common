@@ -12,6 +12,9 @@ var walletConnectModule = require('@web3-onboard/walletconnect');
 var mewModule = require('@web3-onboard/mew');
 var fortmaticModule = require('@web3-onboard/fortmatic');
 var trezorModule = require('@web3-onboard/trezor');
+var ledgerModule = require('@web3-onboard/ledger');
+var torusModule = require('@web3-onboard/torus');
+var coinbaseModule = require('@web3-onboard/coinbase');
 
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
@@ -21,6 +24,9 @@ var walletConnectModule__default = /*#__PURE__*/_interopDefaultLegacy(walletConn
 var mewModule__default = /*#__PURE__*/_interopDefaultLegacy(mewModule);
 var fortmaticModule__default = /*#__PURE__*/_interopDefaultLegacy(fortmaticModule);
 var trezorModule__default = /*#__PURE__*/_interopDefaultLegacy(trezorModule);
+var ledgerModule__default = /*#__PURE__*/_interopDefaultLegacy(ledgerModule);
+var torusModule__default = /*#__PURE__*/_interopDefaultLegacy(torusModule);
+var coinbaseModule__default = /*#__PURE__*/_interopDefaultLegacy(coinbaseModule);
 
 function _iterableToArrayLimit(arr, i) {
   var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"];
@@ -568,6 +574,8 @@ var prod = {
 var envConfig = prod; // process.env.NODE_ENV === "development" ? dev : prod
 var config = _objectSpread2(_objectSpread2({}, envConfig), common);
 
+var img = "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='860.516' height='204.228' viewBox='0 0 860.516 204.228'%3e %3cg id='Galaxis_black' transform='translate(-185.621 -308.011)'%3e %3cg id='Group_3' data-name='Group 3'%3e %3cpath id='Path_16' data-name='Path 16' d='M1041.8%2c419.1a28.588%2c28.588%2c0%2c0%2c0-11.4-7.9%2c163.19%2c163.19%2c0%2c0%2c0-17.6-5.3q-9.15-2.25-14.7-4.2a24.393%2c24.393%2c0%2c0%2c1-9.1-5.5%2c12.974%2c12.974%2c0%2c0%2c1-3.6-9.6%2c15.706%2c15.706%2c0%2c0%2c1%2c6.6-13c4.4-3.3%2c10.9-5%2c19.6-5a48.867%2c48.867%2c0%2c0%2c1%2c13.9%2c2.1%2c47.434%2c47.434%2c0%2c0%2c1%2c13.3%2c6.2l3.5-8.4a48.065%2c48.065%2c0%2c0%2c0-14.1-6.4%2c58.366%2c58.366%2c0%2c0%2c0-16.6-2.3c-8.1%2c0-14.9%2c1.2-20.4%2c3.7s-9.5%2c5.7-12.2%2c9.8a25.222%2c25.222%2c0%2c0%2c0-4%2c13.7c0%2c6.1%2c1.6%2c11%2c4.7%2c14.6a29.224%2c29.224%2c0%2c0%2c0%2c11.4%2c8%2c146.889%2c146.889%2c0%2c0%2c0%2c17.8%2c5.4%2c136.535%2c136.535%2c0%2c0%2c1%2c14.6%2c4.2%2c25.136%2c25.136%2c0%2c0%2c1%2c8.8%2c5.4%2c12.739%2c12.739%2c0%2c0%2c1%2c3.6%2c9.5c0%2c5.2-2.2%2c9.4-6.7%2c12.7-4.4%2c3.3-11.1%2c4.9-20%2c4.9a52.513%2c52.513%2c0%2c0%2c1-18.4-3.3%2c39.383%2c39.383%2c0%2c0%2c1-14.3-8.7l-4.1%2c8.1q5.55%2c5.85%2c15.6%2c9.3a62.465%2c62.465%2c0%2c0%2c0%2c21.2%2c3.5c8.1%2c0%2c15-1.2%2c20.5-3.6%2c5.6-2.4%2c9.7-5.7%2c12.4-9.8a24.406%2c24.406%2c0%2c0%2c0%2c4-13.7c.3-6-1.2-10.8-4.3-14.4' fill='%23010202'/%3e %3cpath id='Path_17' data-name='Path 17' d='M557.2%2c360.6l-45.3%2c99.1H523l28.5-10.6H527.7l34.8-77.6L602%2c459.7h10.9l-45.3-99.1Z' fill='%23010202'/%3e %3cpath id='Path_18' data-name='Path 18' d='M836.2%2c459.7h12.1l30.9-42.4-18.7%2c9.5Z' fill='%23010202'/%3e %3cpath id='Path_19' data-name='Path 19' d='M891.5%2c401.6l30.1-41H910.3l-29.8%2c40.5-29.8-40.5H838.6l35.2%2c48Z' fill='%23010202'/%3e %3cpath id='Path_20' data-name='Path 20' d='M880.5%2c416.6l31.6%2c43.1h12.2l-35.1-47.5Z' fill='%23010202'/%3e %3cpath id='Path_21' data-name='Path 21' d='M941.4%2c382.1l10.5-4V360.6H941.4Z' fill='%23010202'/%3e %3cpath id='Path_22' data-name='Path 22' d='M941.4%2c459.7h10.5V380.3l-10.5%2c5.4Z' fill='%23010202'/%3e %3cpath id='Path_23' data-name='Path 23' d='M764.2%2c360.6l-45.3%2c99.1H730l28.5-10.6H734.7l34.8-77.6L809%2c459.7h10.9l-45.3-99.1Z' fill='%23010202'/%3e %3cpath id='Path_24' data-name='Path 24' d='M441.4%2c374.4a44.969%2c44.969%2c0%2c0%2c1%2c21.7-5.3c12.1%2c0%2c22%2c3.9%2c29.9%2c11.6l6.5-6.7a41.4%2c41.4%2c0%2c0%2c0-16-10.7%2c58.245%2c58.245%2c0%2c0%2c0-20.8-3.6%2c55.466%2c55.466%2c0%2c0%2c0-26.9%2c6.5%2c47.861%2c47.861%2c0%2c0%2c0-18.7%2c18.1%2c52.344%2c52.344%2c0%2c0%2c0%2c0%2c51.6%2c47.612%2c47.612%2c0%2c0%2c0%2c18.7%2c18%2c55.073%2c55.073%2c0%2c0%2c0%2c26.8%2c6.5%2c60.8%2c60.8%2c0%2c0%2c0%2c20-3.3%2c49.7%2c49.7%2c0%2c0%2c0%2c16.4-9.3V418.5L488.9%2c423v20.4c-7.1%2c5.1-15.7%2c7.6-25.9%2c7.6a43.937%2c43.937%2c0%2c0%2c1-21.7-5.4%2c39.505%2c39.505%2c0%2c0%2c1-15.1-14.7%2c40.152%2c40.152%2c0%2c0%2c1-5.5-21%2c40.659%2c40.659%2c0%2c0%2c1%2c5.5-21%2c39.28%2c39.28%2c0%2c0%2c1%2c15.2-14.5' fill='%23010202'/%3e %3cpath id='Path_25' data-name='Path 25' d='M643.4%2c360.6h-.1l.1.1Z' fill='%23010202'/%3e %3cpath id='Path_26' data-name='Path 26' d='M643.4%2c361l-10.5%2c4.7v94h66v-9.1H643.4Z' fill='%23010202'/%3e %3c/g%3e %3cg id='Group_4' data-name='Group 4'%3e %3cpath id='Path_27' data-name='Path 27' d='M327.5%2c370a40.2%2c40.2%2c0%2c0%2c1%2c15.7%2c10.8A43.091%2c43.091%2c0%2c0%2c1%2c320.8%2c452c-17.1%2c4-35.9-3.7-45.8-19.2-5.2-8.2-12.2-12.4-22-11.9-11.1.6-20.9%2c10.5-21.4%2c21.5-.5%2c12.6%2c7.7%2c23.2%2c19.5%2c24.7%2c3%2c.4%2c6.1-.2%2c9.1-.3.8%2c0%2c1.8-.2%2c2.4.2%2c5.8%2c3.9%2c11.5%2c8%2c17.3%2c12a40.946%2c40.946%2c0%2c0%2c1-17.5%2c7.4%2c42.9%2c42.9%2c0%2c0%2c1-49.8-33.8c-4.8-23%2c10.4-46.1%2c33.4-50.7%2c3.1-.6%2c6.3-.8%2c9.4-1.1%2c9.4-.8%2c16.1-5.6%2c19.6-14.3%2c3.5-8.8%2c2.1-17-4.2-24.1-6.2-7-14.2-9.5-23.2-7.1s-14.6%2c8.5-16.9%2c17.5a3.592%2c3.592%2c0%2c0%2c1-1.5%2c2.1c-5.7%2c3-11.5%2c5.9-17.3%2c8.7a6.374%2c6.374%2c0%2c0%2c1-.9.2%2c41.989%2c41.989%2c0%2c0%2c1%2c3.4-24%2c43%2c43%2c0%2c0%2c1%2c69.3-12.7c12.9%2c12.6%2c16.4%2c31.7%2c9%2c48.5-.8%2c1.7-1.5%2c3.4-2.4%2c5.1-6.1%2c12.1%2c1.2%2c28.4%2c16.3%2c31.8a23.484%2c23.484%2c0%2c0%2c0%2c25.7-12.2c4.9-9.4%2c2.8-20.5-5.2-27.9a3.7%2c3.7%2c0%2c0%2c1-1.2-2.5c.3-6.4.8-12.8%2c1.3-19.1A1.578%2c1.578%2c0%2c0%2c0%2c327.5%2c370Z' fill='%23010202'/%3e %3cpath id='Path_28' data-name='Path 28' d='M317.4%2c394.3c7%2c3.4%2c10.9%2c8.8%2c10.6%2c16.8-.4%2c8.3-7.9%2c15.3-16.3%2c15.3-8.7%2c0-16.4-6.9-16.4-15.3a19.823%2c19.823%2c0%2c0%2c1%2c2.1-9.3c9.7-17.8%2c7.9-40.2-5.4-55.7-13.4-15.6-30.6-21.5-50.5-16.5-19.7%2c5-31.9%2c18.2-36.5%2c38-1.5%2c6.2-.8%2c12.6.6%2c18.8a3.208%2c3.208%2c0%2c0%2c1-.5%2c2.7c-4.3%2c4.7-8.8%2c9.3-13.1%2c13.8-8.5-14.9-10.5-44.4%2c6.6-67.5A67.529%2c67.529%2c0%2c0%2c1%2c278.4%2c313C301.9%2c322.6%2c328.2%2c352.1%2c317.4%2c394.3Z' fill='%23010202'/%3e %3cpath id='Path_29' data-name='Path 29' d='M307.4%2c485.8a65.549%2c65.549%2c0%2c0%2c1-17.5%2c16.1c-40.3%2c25.5-94.3%2c1.4-102-45.7-5.6-33.5%2c14.2-65.4%2c46.9-75.5%2c1.8-.5%2c2.4-1.2%2c2.4-3.1a16.433%2c16.433%2c0%2c0%2c1%2c32.8-1.1c.7%2c9.1-5.4%2c17-14.3%2c17.8-7.3.6-14.4%2c1.5-21.1%2c4.5-19.8%2c8.9-31.9%2c30-29.3%2c51.2a49.878%2c49.878%2c0%2c0%2c0%2c41.6%2c43.5c14.7%2c2.3%2c27.8-1.3%2c39.4-10.5a3.959%2c3.959%2c0%2c0%2c1%2c3.9-.8C295.7%2c483.4%2c301.4%2c484.5%2c307.4%2c485.8Z' fill='%23010202'/%3e %3cpath id='Path_30' data-name='Path 30' d='M320.2%2c343.5c23.5%2c2.5%2c48.8%2c20.3%2c56.3%2c49.9A67.151%2c67.151%2c0%2c0%2c1%2c346.8%2c467c-24.1%2c15.1-58.1%2c14.4-82.6-9-5.6%2c3.3-11.4%2c3.7-17.3.6a16.39%2c16.39%2c0%2c0%2c1-8.3-17.3c1-6.6%2c6.4-12%2c13.5-13.4%2c6.3-1.3%2c13.4%2c1.9%2c16.9%2c7.7%2c9.5%2c15.5%2c23.6%2c23.7%2c41.6%2c24.2a49.384%2c49.384%2c0%2c0%2c0%2c50.3-42.2c3.4-24.2-9.7-46.1-32.7-54.5a3.3%2c3.3%2c0%2c0%2c1-2.5-3%2c65.6%2c65.6%2c0%2c0%2c0-2.3-8.4C322.4%2c348.9%2c321.3%2c346.3%2c320.2%2c343.5Z' fill='%23010202'/%3e %3c/g%3e %3c/g%3e%3c/svg%3e";
+
 config.RPC_URL;
   var FORTMATIC_KEY = config.FORTMATIC_KEY;
   config.ETHERSCAN_URL;
@@ -575,12 +583,15 @@ config.RPC_URL;
 var injected = injectedModule__default["default"]();
 var walletConnect = walletConnectModule__default["default"]();
 var mew = mewModule__default["default"]();
+var ledger = ledgerModule__default["default"]();
+var torus = torusModule__default["default"]();
+var coinbase = coinbaseModule__default["default"]();
 var fortmatic = fortmaticModule__default["default"]({
   apiKey: FORTMATIC_KEY
 });
 var trezor = trezorModule__default["default"]({
-  appUrl: "https://galaxis.xyz/",
-  email: "info@galaxis.xyz"
+  appUrl: 'https://galaxis.xyz/',
+  email: 'info@galaxis.xyz'
 });
 var web3Onboard = react.init({
   accountCenter: {
@@ -591,19 +602,19 @@ var web3Onboard = react.init({
     }
   },
 
-  wallets: [injected, walletConnect, mew, fortmatic, trezor],
+  wallets: [injected, walletConnect, torus, mew, fortmatic, trezor, ledger, coinbase],
   chains: config.CHAINS,
   appMetadata: {
-    name: "Galaxis",
-    icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><defs><style>.cls-1{fill:#201602}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="layer_1-2" data-name="layer 1"><path class="cls-1" d="M9 45H1a1 1 0 0 1-1-1V30a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1zm-7-2h6V31H2z"/><path class="cls-1" d="M27 48h-.22l-18-4 .44-2 17.65 4L46 36.38v-1.14L33.21 38l-.42-2 14-3A1 1 0 0 1 48 34v3a1 1 0 0 1-.55.89l-20 10A1 1 0 0 1 27 48z"/><path class="cls-1" d="M24 41a.8.8 0 0 1-.27 0l-7-2 .54-2 6.81 2 7.92-.9V36h-7a1 1 0 0 1-.45-.11L16.76 32H9v-2h8a1 1 0 0 1 .45.11L25.24 34H33a1 1 0 0 1 1 1v4a1 1 0 0 1-.89 1l-9 1zM4 39h2v2H4zM29 26a4 4 0 0 1-4-4h2a2 2 0 1 0 2-2 4 4 0 1 1 4-4h-2a2 2 0 1 0-2 2 4 4 0 0 1 0 8z"/><path class="cls-1" d="M28 25h2v3h-2zM28 10h2v3h-2z"/><path class="cls-1" d="M29 31a12 12 0 1 1 12-12 12 12 0 0 1-12 12zm0-22a10 10 0 1 0 10 10A10 10 0 0 0 29 9z"/><path class="cls-1" d="M40 18h7v2h-7zM11 18h7v2h-7zM28 30h2v4h-2zM28 1h2v7h-2z"/><path class="cls-1" transform="rotate(-45 39.254 8.75)" d="M35.75 7.75h7v2h-7z"/><path class="cls-1" transform="rotate(-45 19.105 28.886)" d="M16.13 27.89h5.97v2h-5.97z"/><path class="cls-1" d="M41.73 32.73a1 1 0 0 1-.71-.29l-5-4.95 1.42-1.42 4.22 4.22a17 17 0 1 0-26.85-1.84l-1.61 1.11a19 19 0 1 1 29.24 2.88 1.05 1.05 0 0 1-.71.29z"/><path class="cls-1" transform="rotate(-45 18.751 8.743)" d="M17.75 5.25h2v7h-2z"/></g></g></svg>',
-    logo: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><style>.cls-2{fill:#0e9347}</style></defs><g id="standing_money" data-name="standing money"><path d="M59 59H5a1 1 0 0 1 0-2h54a1 1 0 0 1 0 2z" style="fill:#b0c4d9"/><rect class="cls-2" x="8.67" y="17.86" width="46.67" height="28.28" rx="3" ry="3" transform="rotate(-45 32.002 31.994)"/><path class="cls-2" d="M14 35.67 35.67 14a4 4 0 0 0 5.66 0L50 22.67a4 4 0 0 0 0 5.66L28.33 50a4 4 0 0 0-5.66 0L14 41.33a4 4 0 0 0 0-5.66z"/><rect class="cls-2" x="8.67" y="17.86" width="46.67" height="28.28" rx="3" ry="3" transform="rotate(-45 32.002 31.994)"/><path d="M14 35.67 35.67 14a4 4 0 0 0 5.66 0L50 22.67a4 4 0 0 0 0 5.66L28.33 50a4 4 0 0 0-5.66 0L14 41.33a4 4 0 0 0 0-5.66z" style="fill:#3bb54a"/><ellipse cx="32" cy="32" rx="4.5" ry="5.66" transform="rotate(-45 32.002 31.994)" style="fill:#89c763"/></g></svg>',
-    description: "Galaxis",
+    name: 'Galaxis',
+    icon: img,
+    logo: img,
+    description: 'Galaxis',
     recommendedInjectedWallets: [{
-      name: "Coinbase",
-      url: "https://wallet.coinbase.com/"
+      name: 'Coinbase',
+      url: 'https://wallet.coinbase.com/'
     }, {
-      name: "MetaMask",
-      url: "https://metamask.io"
+      name: 'MetaMask',
+      url: 'https://metamask.io'
     }]
   }
 });
