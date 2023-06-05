@@ -605,8 +605,6 @@ var web3Onboard = init({
 
 var Web3Ctx = /*#__PURE__*/createContext({});
 
-var DEPLOYED_CHAIN_ID = config.DEPLOYED_CHAIN_ID,
-  RPC_URL = config.RPC_URL;
 var sx = {
   root: {
     display: 'flex',
@@ -620,10 +618,11 @@ var sx = {
     margin: 'auto'
   }
 };
-var Web3Manager = function Web3Manager(_ref) {
+var Web3Manager = function Web3Manager(props) {
   var _wallet$accounts$;
-  var children = _ref.children;
-    _ref.props;
+  var _props$config = props.config,
+    DEPLOYED_CHAIN_ID = _props$config.DEPLOYED_CHAIN_ID,
+    RPC_URL = _props$config.RPC_URL;
   var _useState = useState(null),
     _useState2 = _slicedToArray(_useState, 2),
     onboard = _useState2[0],
@@ -719,8 +718,8 @@ var Web3Manager = function Web3Manager(_ref) {
   }, [wallet]);
   useEffect(function () {
     if (!connectedWallets.length) return;
-    var connectedWalletsLabelArray = connectedWallets.map(function (_ref2) {
-      var label = _ref2.label;
+    var connectedWalletsLabelArray = connectedWallets.map(function (_ref) {
+      var label = _ref.label;
       return label;
     });
     window.sessionStorage.setItem('connectedWallets', JSON.stringify(connectedWalletsLabelArray));
@@ -766,7 +765,7 @@ var Web3Manager = function Web3Manager(_ref) {
   // };
 
   var handleConnect = /*#__PURE__*/function () {
-    var _ref4 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2(e) {
+    var _ref3 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2(e) {
       return _regeneratorRuntime().wrap(function _callee2$(_context2) {
         while (1) switch (_context2.prev = _context2.next) {
           case 0:
@@ -780,7 +779,7 @@ var Web3Manager = function Web3Manager(_ref) {
       }, _callee2);
     }));
     return function handleConnect(_x) {
-      return _ref4.apply(this, arguments);
+      return _ref3.apply(this, arguments);
     };
   }();
   var handleDisconnect = function handleDisconnect() {
@@ -844,7 +843,7 @@ var Web3Manager = function Web3Manager(_ref) {
         });
       }
     }
-  }, children);
+  }, props.children);
 };
 var UseMyContext = function UseMyContext() {
   var context = useContext(Web3Ctx);

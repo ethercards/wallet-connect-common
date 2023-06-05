@@ -9,8 +9,6 @@ import Web3Ctx from '../context/Web3Ctx';
 import config from '../config/config';
 import React from 'react';
 
-const { DEPLOYED_CHAIN_ID, RPC_URL } = config;
-
 const sx = {
   root: {
     display: 'flex',
@@ -25,7 +23,8 @@ const sx = {
   },
 };
 
-const Web3Manager = ({ children, props }) => {
+const Web3Manager = (props) => {
+  const { DEPLOYED_CHAIN_ID, RPC_URL } = props.config;
   const [onboard, setOnboard] = useState(null);
   const [initialized, setInitialized] = useState(false);
   const [ethersProvider, setEthersProvider] = useState(null);
@@ -209,7 +208,7 @@ const Web3Manager = ({ children, props }) => {
           }),
       }}
     >
-      {children}
+      {props.children}
     </Web3Ctx.Provider>
   );
 };
