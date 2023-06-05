@@ -215,7 +215,6 @@ const Web3Manager = ({ children, props }) => {
 };
 const UseMyContext = () => {
   const context = useContext(Web3Ctx);
-  console.log(context, ' context');
   return context;
 };
 export { Web3Manager, UseMyContext };
