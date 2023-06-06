@@ -6,7 +6,6 @@ import { toast } from 'react-toast';
 import { useConnectWallet, useSetChain, useWallets } from '@web3-onboard/react';
 import Web3Onboard from '../utils/onboard';
 import Web3Ctx from '../context/Web3Ctx';
-import config from '../config/config';
 import React from 'react';
 
 const sx = {
@@ -83,7 +82,7 @@ const Web3Manager = (props) => {
     if (!wallet?.provider) {
       console.log('wallet not found, setting default provider', chainId);
       let provider = null;
-      if (chainId === config.DEPLOYED_CHAIN_ID) {
+      if (chainId === DEPLOYED_CHAIN_ID) {
         provider = new ethers.providers.JsonRpcProvider(RPC_URL);
       } else {
         provider = getProvider(chainId);
@@ -199,7 +198,7 @@ const Web3Manager = (props) => {
         ethersProvider,
         defaultProvider,
         chainId: chainId,
-        defaultChainId: config.DEPLOYED_CHAIN_ID,
+        defaultChainId: DEPLOYED_CHAIN_ID,
         connecting,
         handleConnect,
         handleDisconnect,

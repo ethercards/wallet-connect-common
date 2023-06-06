@@ -4,7 +4,6 @@ import walletConnectModule from '@web3-onboard/walletconnect';
 import mewModule from '@web3-onboard/mew';
 import fortmaticModule from '@web3-onboard/fortmatic';
 import trezorModule from '@web3-onboard/trezor';
-import config from '../config/config';
 import ledgerModule from '@web3-onboard/ledger';
 import torusModule from '@web3-onboard/torus';
 import coinbaseModule from '@web3-onboard/coinbase';

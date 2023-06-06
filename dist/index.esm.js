@@ -39,27 +39,6 @@ function _iterableToArrayLimit(arr, i) {
     return _arr;
   }
 }
-function ownKeys(object, enumerableOnly) {
-  var keys = Object.keys(object);
-  if (Object.getOwnPropertySymbols) {
-    var symbols = Object.getOwnPropertySymbols(object);
-    enumerableOnly && (symbols = symbols.filter(function (sym) {
-      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
-    })), keys.push.apply(keys, symbols);
-  }
-  return keys;
-}
-function _objectSpread2(target) {
-  for (var i = 1; i < arguments.length; i++) {
-    var source = null != arguments[i] ? arguments[i] : {};
-    i % 2 ? ownKeys(Object(source), !0).forEach(function (key) {
-      _defineProperty(target, key, source[key]);
-    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) {
-      Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
-    });
-  }
-  return target;
-}
 function _regeneratorRuntime() {
   _regeneratorRuntime = function () {
     return exports;
@@ -413,20 +392,6 @@ function _createClass(Constructor, protoProps, staticProps) {
   });
   return Constructor;
 }
-function _defineProperty(obj, key, value) {
-  key = _toPropertyKey(key);
-  if (key in obj) {
-    Object.defineProperty(obj, key, {
-      value: value,
-      enumerable: true,
-      configurable: true,
-      writable: true
-    });
-  } else {
-    obj[key] = value;
-  }
-  return obj;
-}
 function _slicedToArray(arr, i) {
   return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
 }
@@ -463,122 +428,6 @@ function _toPropertyKey(arg) {
   var key = _toPrimitive(arg, "string");
   return typeof key === "symbol" ? key : String(key);
 }
-
-var common = {
-  INFURA_ID: '96a0984ce6264f5a8edcf752673de5b8',
-  GALAXIS_REGISTRY: '0x1e8150050A7a4715aad42b905C08df76883f396F',
-  OPENSEA_COLLECTION: 'https://api.opensea.io/api/v1/collection',
-  GOOGLE_API: 'https://www.googleapis.com/youtube/v3/search',
-  RECAPCHA_SITEKEY: '6LfAjcYeAAAAAJTxnTgx_JVndCSmQgU1gqzEIwoL',
-  NO_PROJECT_FOUND: 'no project found'
-};
-({
-  CREDITCARD_ENABLED: true,
-  DEPLOYED_NTW_NAME: 'goerli',
-  DEPLOYED_CHAIN_ID: 5,
-  FORTMATIC_KEY: 'pk_test_DD2BBA8AAA1D4FED',
-  RPC_URL: "https://goerli.infura.io/v3/".concat(common.INFURA_ID),
-  ETHERSCAN_URL: 'https://goerli.etherscan.io',
-  POLYGONSCAN_URL: 'https://mumbai.polygonscan.com',
-  OPENSEA_URL: 'https://testnets.opensea.io/',
-  API_URL: 'https://cms.dev.galaxis.xyz',
-  PREVIEW_URL: 'https://mcb.dev.galaxis.xyz/api/project-session',
-  LAUNCHPAD_API_URL: 'https://mcb.dev.galaxis.xyz/api',
-  PREVIEW_IMAGES: 'https://mcb.dev.galaxis.xyz/projects/',
-  AWS_URL: 'https://cms.dev.galaxis.xyz/storage/app/media',
-  AGGREGATOR_URL: 'https://nft-aggregator-goerli.herokuapp.com/token',
-  EC_TOKEN_ADDRESS: '0xAAD4475343f5150E33d6194270f04e7e5968A2f8',
-  PHOENIX_CONTRACT_ADDRESS: '0x0937aD2d26D1f37c2d8FdA1b4c071e8f3786aF5B',
-  CROSSMINT_CLIENT_ID: '7de2bbab-cec3-456b-a2e1-96bbd99cb8ad',
-  CROSSMINT_ENV: 'staging',
-  CHAINS: [{
-    id: "0x5",
-    token: "gETH",
-    label: "Goerli",
-    rpcUrl: "https://goerli.infura.io/v3/".concat(common.INFURA_ID),
-    // rpcURL required for wallet balances
-    blockExplorerUrl: "https://goerli.etherscan.io"
-  }, {
-    id: "0x13881",
-    token: "mMATIC",
-    label: "Polygon Mumbai Testnet",
-    rpcUrl: "https://polygon-mumbai.infura.io/v3/".concat(common.INFURA_ID),
-    blockExplorerUrl: "https://mumbai.polygonscan.com"
-  }]
-});
-({
-  DEPLOYED_NTW_NAME: 'goerli',
-  DEPLOYED_CHAIN_ID: 5,
-  FORTMATIC_KEY: 'pk_test_DD2BBA8AAA1D4FED',
-  RPC_URL: "https://goerli.infura.io/v3/".concat(common.INFURA_ID),
-  ETHERSCAN_URL: 'https://goerli.etherscan.io',
-  POLYGONSCAN_URL: 'https://mumbai.polygonscan.com',
-  OPENSEA_URL: 'https://testnets.opensea.io/',
-  API_URL: 'https://cms.staging.galaxis.xyz',
-  PREVIEW_URL: 'https://mcb.staging.galaxis.xyz/api/project-session',
-  LAUNCHPAD_API_URL: 'https://mcb.staging.galaxis.xyz/api',
-  PREVIEW_IMAGES: 'https://mcb.staging.galaxis.xyz/projects/',
-  AWS_URL: 'https://cms.staging.galaxis.xyz/storage/app/media',
-  AGGREGATOR_URL: 'https://nft-aggregator-goerli.herokuapp.com/token',
-  EC_TOKEN_ADDRESS: '0xAAD4475343f5150E33d6194270f04e7e5968A2f8',
-  PHOENIX_CONTRACT_ADDRESS: '0x0937aD2d26D1f37c2d8FdA1b4c071e8f3786aF5B',
-  CROSSMINT_CLIENT_ID: '7de2bbab-cec3-456b-a2e1-96bbd99cb8ad',
-  CROSSMINT_ENV: 'staging',
-  CHAINS: [{
-    id: "0x5",
-    token: "gETH",
-    label: "Goerli",
-    rpcUrl: "https://goerli.infura.io/v3/".concat(common.INFURA_ID),
-    // rpcURL required for wallet balances
-    blockExplorerUrl: "https://goerli.etherscan.io"
-  }, {
-    id: "0x13881",
-    token: "mMATIC",
-    label: "Polygon Mumbai Testnet",
-    rpcUrl: "https://polygon-mumbai.infura.io/v3/".concat(common.INFURA_ID),
-    blockExplorerUrl: "https://mumbai.polygonscan.com"
-  }]
-});
-var prod = {
-  DEPLOYED_NTW_NAME: 'mainnet',
-  DEPLOYED_CHAIN_ID: 1,
-  RPC_URL: "https://mainnet.infura.io/v3/".concat(common.INFURA_ID),
-  FORTMATIC_KEY: 'pk_live_FBFF1F05F2879F29',
-  ETHERSCAN_URL: 'https://etherscan.io',
-  POLYGONSCAN_URL: 'https://polygonscan.com',
-  OPENSEA_URL: 'https://opensea.io/',
-  API_URL: 'https://cms.galaxis.xyz',
-  PREVIEW_URL: 'https://mcb.galaxis.xyz/api/project-session',
-  LAUNCHPAD_API_URL: 'https://mcb.galaxis.xyz/api',
-  PREVIEW_IMAGES: 'https://mcb.galaxis.xyz/projects/',
-  AWS_URL: 'https://cms.galaxis.xyz/storage/app/media',
-  AGGREGATOR_URL: 'https://nft-aggregator.herokuapp.com/token',
-  EC_TOKEN_ADDRESS: '0x97ca7fe0b0288f5eb85f386fed876618fb9b8ab8',
-  PHOENIX_CONTRACT_ADDRESS: '0x55B3154Ad761405B0cdd27355943Eb808d40b5A1',
-  CROSSMINT_CLIENT_ID: 'b3f5189b-66fe-43d7-8295-c73f9fa3e3ef',
-  CROSSMINT_ENV: '',
-  CHAINS: [{
-    id: "0x1",
-    // chain ID must be in hexadecimel
-    token: "ETH",
-    // main chain token
-    label: "Ethereum Mainnet",
-    rpcUrl: "https://mainnet.infura.io/v3/".concat(common.INFURA_ID),
-    // rpcURL required for wallet balances
-    blockExplorerUrl: "https://etherscan.io"
-  }, {
-    id: "0x89",
-    token: "MATIC",
-    label: "Polygon Mainnet",
-    rpcUrl: "https://polygon-mainnet.infura.io/v3/".concat(common.INFURA_ID),
-    blockExplorerUrl: "https://polygonscan.com"
-  }]
-};
-
-// if use npm/yarn start,  NODE_ENV = "development"
-// if use npm/yarn build,  NODE_ENV = "production"
-var envConfig = prod; // process.env.NODE_ENV === "development" ? dev : prod
-var config = _objectSpread2(_objectSpread2({}, envConfig), common);
 
 var img = "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='169.245' height='26.857' viewBox='0 0 169.245 26.857'%3e %3cg id='galaxis_text_logo' data-name='galaxis text logo' transform='translate(-245.426 -321.77)'%3e %3cg id='Group_1648' data-name='Group 1648' transform='translate(245.426 321.769)'%3e %3cpath id='Path_368' data-name='Path 368' d='M990.873%2c375.584a7.61%2c7.61%2c0%2c0%2c0-3.034-2.1%2c43.451%2c43.451%2c0%2c0%2c0-4.685-1.411q-2.435-.6-3.913-1.118a6.492%2c6.492%2c0%2c0%2c1-2.422-1.464%2c3.453%2c3.453%2c0%2c0%2c1-.958-2.555%2c4.181%2c4.181%2c0%2c0%2c1%2c1.757-3.46%2c8.608%2c8.608%2c0%2c0%2c1%2c5.217-1.331%2c13.008%2c13.008%2c0%2c0%2c1%2c3.7.559%2c12.626%2c12.626%2c0%2c0%2c1%2c3.54%2c1.65l.932-2.236a12.794%2c12.794%2c0%2c0%2c0-3.753-1.7%2c15.535%2c15.535%2c0%2c0%2c0-4.419-.612%2c13.115%2c13.115%2c0%2c0%2c0-5.43.985%2c7.368%2c7.368%2c0%2c0%2c0-3.247%2c2.609%2c6.714%2c6.714%2c0%2c0%2c0-1.065%2c3.647%2c5.775%2c5.775%2c0%2c0%2c0%2c1.251%2c3.886%2c7.779%2c7.779%2c0%2c0%2c0%2c3.034%2c2.129%2c39.1%2c39.1%2c0%2c0%2c0%2c4.738%2c1.437A36.334%2c36.334%2c0%2c0%2c1%2c986%2c375.611a6.691%2c6.691%2c0%2c0%2c1%2c2.342%2c1.437%2c3.391%2c3.391%2c0%2c0%2c1%2c.958%2c2.529%2c4%2c4%2c0%2c0%2c1-1.783%2c3.38%2c8.869%2c8.869%2c0%2c0%2c1-5.324%2c1.3%2c13.977%2c13.977%2c0%2c0%2c1-4.9-.878%2c10.483%2c10.483%2c0%2c0%2c1-3.806-2.316l-1.091%2c2.156a10.149%2c10.149%2c0%2c0%2c0%2c4.152%2c2.475%2c16.627%2c16.627%2c0%2c0%2c0%2c5.643.932%2c13.722%2c13.722%2c0%2c0%2c0%2c5.457-.958%2c7.211%2c7.211%2c0%2c0%2c0%2c3.3-2.609%2c6.5%2c6.5%2c0%2c0%2c0%2c1.065-3.647%2c5.256%2c5.256%2c0%2c0%2c0-1.145-3.833' transform='translate(-822.782 -359.773)' fill='%23010202'/%3e %3cpath id='Path_369' data-name='Path 369' d='M523.958%2c360.6%2c511.9%2c386.978h2.955l7.586-2.822h-6.335l9.263-20.655%2c10.514%2c23.477h2.9L526.726%2c360.6Z' transform='translate(-484.856 -360.36)' fill='%23010202'/%3e %3cpath id='Path_370' data-name='Path 370' d='M836.2%2c428.586h3.221l8.225-11.286-4.977%2c2.529Z' transform='translate(-722.835 -401.968)' fill='%23010202'/%3e %3cpath id='Path_371' data-name='Path 371' d='M852.681%2c371.513l8.012-10.913h-3.008l-7.932%2c10.78-7.932-10.78H838.6l9.369%2c12.776Z' transform='translate(-724.596 -360.36)' fill='%23010202'/%3e %3cpath id='Path_372' data-name='Path 372' d='M880.5%2c413.371l8.411%2c11.472h3.247L882.816%2c412.2Z' transform='translate(-755.344 -398.226)' fill='%23010202'/%3e %3cpath id='Path_373' data-name='Path 373' d='M941.4%2c366.323l2.795-1.065V360.6H941.4Z' transform='translate(-800.033 -360.36)' fill='%23010202'/%3e %3cpath id='Path_374' data-name='Path 374' d='M941.4%2c401.434h2.795V380.3l-2.795%2c1.437Z' transform='translate(-800.033 -374.817)' fill='%23010202'/%3e %3cpath id='Path_375' data-name='Path 375' d='M730.958%2c360.6%2c718.9%2c386.978h2.955l7.586-2.822h-6.335l9.263-20.655%2c10.514%2c23.477h2.9L733.726%2c360.6Z' transform='translate(-636.758 -360.36)' fill='%23010202'/%3e %3cpath id='Path_376' data-name='Path 376' d='M418.578%2c363.613a11.97%2c11.97%2c0%2c0%2c1%2c5.776-1.411%2c10.92%2c10.92%2c0%2c0%2c1%2c7.959%2c3.088l1.73-1.783a11.02%2c11.02%2c0%2c0%2c0-4.259-2.848%2c15.5%2c15.5%2c0%2c0%2c0-5.536-.958%2c14.763%2c14.763%2c0%2c0%2c0-7.16%2c1.73%2c12.739%2c12.739%2c0%2c0%2c0-4.978%2c4.818%2c13.933%2c13.933%2c0%2c0%2c0%2c0%2c13.735%2c12.673%2c12.673%2c0%2c0%2c0%2c4.978%2c4.791%2c14.659%2c14.659%2c0%2c0%2c0%2c7.133%2c1.73%2c16.185%2c16.185%2c0%2c0%2c0%2c5.324-.878%2c13.229%2c13.229%2c0%2c0%2c0%2c4.365-2.475v-7.8l-2.688%2c1.2v5.43A11.478%2c11.478%2c0%2c0%2c1%2c424.328%2c384a11.7%2c11.7%2c0%2c0%2c1-5.776-1.437%2c10.515%2c10.515%2c0%2c0%2c1-4.019-3.913%2c10.688%2c10.688%2c0%2c0%2c1-1.464-5.59%2c10.823%2c10.823%2c0%2c0%2c1%2c1.464-5.59%2c10.455%2c10.455%2c0%2c0%2c1%2c4.046-3.86' transform='translate(-410.3 -359.7)' fill='%23010202'/%3e %3cpath id='Path_377' data-name='Path 377' d='M643.327%2c360.6H643.3l.027.027Z' transform='translate(-581.281 -360.36)' fill='%23010202'/%3e %3cpath id='Path_378' data-name='Path 378' d='M635.695%2c361l-2.795%2c1.251v25.021h17.568v-2.422H635.695Z' transform='translate(-573.649 -360.654)' fill='%23010202'/%3e %3c/g%3e %3c/g%3e%3c/svg%3e";
 
@@ -741,7 +590,7 @@ var Web3Manager = function Web3Manager(props) {
     if (!(wallet !== null && wallet !== void 0 && wallet.provider)) {
       console.log('wallet not found, setting default provider', chainId);
       var provider = null;
-      if (chainId === config.DEPLOYED_CHAIN_ID) {
+      if (chainId === DEPLOYED_CHAIN_ID) {
         provider = new ethers.providers.JsonRpcProvider(RPC_URL);
       } else {
         provider = getProvider(chainId);
@@ -867,7 +716,7 @@ var Web3Manager = function Web3Manager(props) {
       ethersProvider: ethersProvider,
       defaultProvider: defaultProvider,
       chainId: chainId,
-      defaultChainId: config.DEPLOYED_CHAIN_ID,
+      defaultChainId: DEPLOYED_CHAIN_ID,
       connecting: connecting,
       handleConnect: handleConnect,
       handleDisconnect: handleDisconnect,
