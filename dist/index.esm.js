@@ -1,5 +1,5 @@
 import { ethers } from 'ethers';
-import React, { createContext, useState, useMemo, useEffect, useContext } from 'react';
+import React, { createContext, useMemo, useState, useEffect, useContext } from 'react';
 import { SpinnerCircular } from 'spinners-react';
 import { toast } from 'react-toast';
 import { init, useConnectWallet, useSetChain, useWallets } from '@web3-onboard/react';
@@ -391,6 +391,28 @@ function _asyncToGenerator(fn) {
     });
   };
 }
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
+function _defineProperties(target, props) {
+  for (var i = 0; i < props.length; i++) {
+    var descriptor = props[i];
+    descriptor.enumerable = descriptor.enumerable || false;
+    descriptor.configurable = true;
+    if ("value" in descriptor) descriptor.writable = true;
+    Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor);
+  }
+}
+function _createClass(Constructor, protoProps, staticProps) {
+  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+  if (staticProps) _defineProperties(Constructor, staticProps);
+  Object.defineProperty(Constructor, "prototype", {
+    writable: false
+  });
+  return Constructor;
+}
 function _defineProperty(obj, key, value) {
   key = _toPropertyKey(key);
   if (key in obj) {
@@ -560,48 +582,57 @@ var config = _objectSpread2(_objectSpread2({}, envConfig), common);
 
 var img = "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='169.245' height='26.857' viewBox='0 0 169.245 26.857'%3e %3cg id='galaxis_text_logo' data-name='galaxis text logo' transform='translate(-245.426 -321.77)'%3e %3cg id='Group_1648' data-name='Group 1648' transform='translate(245.426 321.769)'%3e %3cpath id='Path_368' data-name='Path 368' d='M990.873%2c375.584a7.61%2c7.61%2c0%2c0%2c0-3.034-2.1%2c43.451%2c43.451%2c0%2c0%2c0-4.685-1.411q-2.435-.6-3.913-1.118a6.492%2c6.492%2c0%2c0%2c1-2.422-1.464%2c3.453%2c3.453%2c0%2c0%2c1-.958-2.555%2c4.181%2c4.181%2c0%2c0%2c1%2c1.757-3.46%2c8.608%2c8.608%2c0%2c0%2c1%2c5.217-1.331%2c13.008%2c13.008%2c0%2c0%2c1%2c3.7.559%2c12.626%2c12.626%2c0%2c0%2c1%2c3.54%2c1.65l.932-2.236a12.794%2c12.794%2c0%2c0%2c0-3.753-1.7%2c15.535%2c15.535%2c0%2c0%2c0-4.419-.612%2c13.115%2c13.115%2c0%2c0%2c0-5.43.985%2c7.368%2c7.368%2c0%2c0%2c0-3.247%2c2.609%2c6.714%2c6.714%2c0%2c0%2c0-1.065%2c3.647%2c5.775%2c5.775%2c0%2c0%2c0%2c1.251%2c3.886%2c7.779%2c7.779%2c0%2c0%2c0%2c3.034%2c2.129%2c39.1%2c39.1%2c0%2c0%2c0%2c4.738%2c1.437A36.334%2c36.334%2c0%2c0%2c1%2c986%2c375.611a6.691%2c6.691%2c0%2c0%2c1%2c2.342%2c1.437%2c3.391%2c3.391%2c0%2c0%2c1%2c.958%2c2.529%2c4%2c4%2c0%2c0%2c1-1.783%2c3.38%2c8.869%2c8.869%2c0%2c0%2c1-5.324%2c1.3%2c13.977%2c13.977%2c0%2c0%2c1-4.9-.878%2c10.483%2c10.483%2c0%2c0%2c1-3.806-2.316l-1.091%2c2.156a10.149%2c10.149%2c0%2c0%2c0%2c4.152%2c2.475%2c16.627%2c16.627%2c0%2c0%2c0%2c5.643.932%2c13.722%2c13.722%2c0%2c0%2c0%2c5.457-.958%2c7.211%2c7.211%2c0%2c0%2c0%2c3.3-2.609%2c6.5%2c6.5%2c0%2c0%2c0%2c1.065-3.647%2c5.256%2c5.256%2c0%2c0%2c0-1.145-3.833' transform='translate(-822.782 -359.773)' fill='%23010202'/%3e %3cpath id='Path_369' data-name='Path 369' d='M523.958%2c360.6%2c511.9%2c386.978h2.955l7.586-2.822h-6.335l9.263-20.655%2c10.514%2c23.477h2.9L526.726%2c360.6Z' transform='translate(-484.856 -360.36)' fill='%23010202'/%3e %3cpath id='Path_370' data-name='Path 370' d='M836.2%2c428.586h3.221l8.225-11.286-4.977%2c2.529Z' transform='translate(-722.835 -401.968)' fill='%23010202'/%3e %3cpath id='Path_371' data-name='Path 371' d='M852.681%2c371.513l8.012-10.913h-3.008l-7.932%2c10.78-7.932-10.78H838.6l9.369%2c12.776Z' transform='translate(-724.596 -360.36)' fill='%23010202'/%3e %3cpath id='Path_372' data-name='Path 372' d='M880.5%2c413.371l8.411%2c11.472h3.247L882.816%2c412.2Z' transform='translate(-755.344 -398.226)' fill='%23010202'/%3e %3cpath id='Path_373' data-name='Path 373' d='M941.4%2c366.323l2.795-1.065V360.6H941.4Z' transform='translate(-800.033 -360.36)' fill='%23010202'/%3e %3cpath id='Path_374' data-name='Path 374' d='M941.4%2c401.434h2.795V380.3l-2.795%2c1.437Z' transform='translate(-800.033 -374.817)' fill='%23010202'/%3e %3cpath id='Path_375' data-name='Path 375' d='M730.958%2c360.6%2c718.9%2c386.978h2.955l7.586-2.822h-6.335l9.263-20.655%2c10.514%2c23.477h2.9L733.726%2c360.6Z' transform='translate(-636.758 -360.36)' fill='%23010202'/%3e %3cpath id='Path_376' data-name='Path 376' d='M418.578%2c363.613a11.97%2c11.97%2c0%2c0%2c1%2c5.776-1.411%2c10.92%2c10.92%2c0%2c0%2c1%2c7.959%2c3.088l1.73-1.783a11.02%2c11.02%2c0%2c0%2c0-4.259-2.848%2c15.5%2c15.5%2c0%2c0%2c0-5.536-.958%2c14.763%2c14.763%2c0%2c0%2c0-7.16%2c1.73%2c12.739%2c12.739%2c0%2c0%2c0-4.978%2c4.818%2c13.933%2c13.933%2c0%2c0%2c0%2c0%2c13.735%2c12.673%2c12.673%2c0%2c0%2c0%2c4.978%2c4.791%2c14.659%2c14.659%2c0%2c0%2c0%2c7.133%2c1.73%2c16.185%2c16.185%2c0%2c0%2c0%2c5.324-.878%2c13.229%2c13.229%2c0%2c0%2c0%2c4.365-2.475v-7.8l-2.688%2c1.2v5.43A11.478%2c11.478%2c0%2c0%2c1%2c424.328%2c384a11.7%2c11.7%2c0%2c0%2c1-5.776-1.437%2c10.515%2c10.515%2c0%2c0%2c1-4.019-3.913%2c10.688%2c10.688%2c0%2c0%2c1-1.464-5.59%2c10.823%2c10.823%2c0%2c0%2c1%2c1.464-5.59%2c10.455%2c10.455%2c0%2c0%2c1%2c4.046-3.86' transform='translate(-410.3 -359.7)' fill='%23010202'/%3e %3cpath id='Path_377' data-name='Path 377' d='M643.327%2c360.6H643.3l.027.027Z' transform='translate(-581.281 -360.36)' fill='%23010202'/%3e %3cpath id='Path_378' data-name='Path 378' d='M635.695%2c361l-2.795%2c1.251v25.021h17.568v-2.422H635.695Z' transform='translate(-573.649 -360.654)' fill='%23010202'/%3e %3c/g%3e %3c/g%3e%3c/svg%3e";
 
-config.RPC_URL;
-  var FORTMATIC_KEY = config.FORTMATIC_KEY;
-  config.ETHERSCAN_URL;
-  config.POLYGON_EXPLORER_URL;
-var injected = injectedModule();
-var walletConnect = walletConnectModule();
-var mew = mewModule();
-var ledger = ledgerModule();
-var torus = torusModule();
-var coinbase = coinbaseModule();
-var fortmatic = fortmaticModule({
-  apiKey: FORTMATIC_KEY
-});
-var trezor = trezorModule({
-  appUrl: 'https://galaxis.xyz/',
-  email: 'info@galaxis.xyz'
-});
-var web3Onboard = init({
-  accountCenter: {
-    desktop: {
-      position: 'topRight',
-      enabled: false
-      // minimal: true,
-    }
-  },
+var Web3Onboard = /*#__PURE__*/function () {
+  function Web3Onboard(FORTMATIC_KEY) {
+    _classCallCheck(this, Web3Onboard);
+    console.log('web4onboaaaard');
+    var injected = injectedModule();
+    var walletConnect = walletConnectModule();
+    var mew = mewModule();
+    var ledger = ledgerModule();
+    var torus = torusModule();
+    var coinbase = coinbaseModule();
+    var fortmatic = fortmaticModule({
+      apiKey: FORTMATIC_KEY
+    });
+    var trezor = trezorModule({
+      appUrl: 'https://galaxis.xyz/',
+      email: 'info@galaxis.xyz'
+    });
+    this.web3Onboard = init({
+      accountCenter: {
+        desktop: {
+          position: 'topRight',
+          enabled: false
+          // minimal: true,
+        }
+      },
 
-  wallets: [injected, walletConnect, torus, mew, fortmatic, trezor, ledger, coinbase],
-  chains: config.CHAINS,
-  appMetadata: {
-    name: 'Galaxis',
-    icon: img,
-    logo: img,
-    description: 'Galaxis',
-    recommendedInjectedWallets: [{
-      name: 'Coinbase',
-      url: 'https://wallet.coinbase.com/'
-    }, {
-      name: 'MetaMask',
-      url: 'https://metamask.io'
-    }]
+      wallets: [injected, walletConnect, torus, mew, fortmatic, trezor, ledger, coinbase],
+      chains: config.CHAINS,
+      appMetadata: {
+        name: 'Galaxis',
+        icon: img,
+        logo: img,
+        description: 'Galaxis',
+        recommendedInjectedWallets: [{
+          name: 'Coinbase',
+          url: 'https://wallet.coinbase.com/'
+        }, {
+          name: 'MetaMask',
+          url: 'https://metamask.io'
+        }]
+      }
+    });
   }
-});
+  _createClass(Web3Onboard, [{
+    key: "getWeb3OnboardInstance",
+    value: function getWeb3OnboardInstance() {
+      return this.web3Onboard;
+    }
+  }]);
+  return Web3Onboard;
+}();
 
 var Web3Ctx = /*#__PURE__*/createContext({});
 
@@ -620,6 +651,10 @@ var sx = {
 };
 var Web3Manager = function Web3Manager(props) {
   var _wallet$accounts$;
+  var web3OnboardInstance = useMemo(function () {
+    return new Web3Onboard(props.config.FORTMATIC_KEY);
+  }, []);
+  var web3Onboard = web3OnboardInstance.getWeb3OnboardInstance();
   var _props$config = props.config,
     DEPLOYED_CHAIN_ID = _props$config.DEPLOYED_CHAIN_ID,
     RPC_URL = _props$config.RPC_URL;

@@ -4,7 +4,7 @@ import { useEffect, useState, useMemo, useContext } from 'react';
 import { SpinnerCircular } from 'spinners-react';
 import { toast } from 'react-toast';
 import { useConnectWallet, useSetChain, useWallets } from '@web3-onboard/react';
-import web3Onboard from '../utils/onboard';
+import Web3Onboard from '../utils/onboard';
 import Web3Ctx from '../context/Web3Ctx';
 import config from '../config/config';
 import React from 'react';
@@ -24,6 +24,12 @@ const sx = {
 };
 
 const Web3Manager = (props) => {
+  const web3OnboardInstance = useMemo(
+    () => new Web3Onboard(props.config.FORTMATIC_KEY),
+    []
+  );
+  const web3Onboard = web3OnboardInstance.getWeb3OnboardInstance();
+
   const { DEPLOYED_CHAIN_ID, RPC_URL } = props.config;
   const [onboard, setOnboard] = useState(null);
   const [initialized, setInitialized] = useState(false);
