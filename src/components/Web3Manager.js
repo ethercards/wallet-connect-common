@@ -24,10 +24,7 @@ const sx = {
 };
 
 const Web3Manager = (props) => {
-  const web3OnboardInstance = useMemo(
-    () => new Web3Onboard(props.config.FORTMATIC_KEY),
-    []
-  );
+  const web3OnboardInstance = useMemo(() => new Web3Onboard(props), []);
   const web3Onboard = web3OnboardInstance.getWeb3OnboardInstance();
 
   const { DEPLOYED_CHAIN_ID, RPC_URL } = props.config;

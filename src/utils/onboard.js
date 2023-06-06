@@ -11,7 +11,8 @@ import coinbaseModule from '@web3-onboard/coinbase';
 import galaxisIcon from '../assets/icons/galaxis.svg';
 
 class Web3Onboard {
-  constructor(FORTMATIC_KEY) {
+  constructor(props) {
+    console.log(props, ' propppp');
     console.log('web4onboaaaard');
     const injected = injectedModule();
     const walletConnect = walletConnectModule();
@@ -19,7 +20,7 @@ class Web3Onboard {
     const ledger = ledgerModule();
     const torus = torusModule();
     const coinbase = coinbaseModule();
-    const fortmatic = fortmaticModule({ apiKey: FORTMATIC_KEY });
+    const fortmatic = fortmaticModule({ apiKey: props.config.FORTMATIC_KEY });
     const trezor = trezorModule({
       appUrl: 'https://galaxis.xyz/',
       email: 'info@galaxis.xyz',
@@ -43,7 +44,7 @@ class Web3Onboard {
         ledger,
         coinbase,
       ],
-      chains: config.CHAINS,
+      chains: props.config.CHAINS,
       appMetadata: {
         name: 'Galaxis',
         icon: galaxisIcon,
