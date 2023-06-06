@@ -1,6 +1,6 @@
 {
   "name": "connectwallet-component",
-  "version": "0.1.68",
+  "version": "0.1.7",
   "private": true,
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
