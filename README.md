@@ -1,14 +1,8 @@
-# DEV
-Primary terminal run this command:
-yarn build-watch
+After installing the package:
 
-Second terminal run the following commands:
-cd playgorund
-yarn start
+import { WalletConnectContextProvider } from 'connectwallet-component' - where u want the context provider for the wallet connection
+<WalletConnectContextProvider><div></div></WalletConnectContextProvider>
 
-
-# DEPLOY
-From the root folder!
-increase version number in  package.json!
-yarn build
-commit&push to git
+after this, u can use the context like this
+import { WalletConnectContext } from 'connectwallet-component';
+const { address, handleConnect, handleDisconnect } = WalletConnectContext();
