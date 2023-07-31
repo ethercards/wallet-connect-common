@@ -103,7 +103,7 @@ const Web3Manager = (props) => {
     const connectedWalletsLabelArray = connectedWallets.map(
       ({ label }) => label
     );
-    window.sessionStorage.setItem(
+    window.localStorage.setItem(
       'connectedWallets',
       JSON.stringify(connectedWalletsLabelArray)
     );
@@ -113,7 +113,7 @@ const Web3Manager = (props) => {
     (async () => {
       if (connect) {
         const previouslyConnectedWallets = JSON.parse(
-          window.sessionStorage.getItem('connectedWallets')
+          window.localStorage.getItem('connectedWallets')
         );
         if (previouslyConnectedWallets?.length) {
           await connect({
@@ -146,7 +146,7 @@ const Web3Manager = (props) => {
     if (onboard) {
       disconnect(wallet);
       setChainId(null);
-      window.sessionStorage.removeItem('connectedWallets');
+      window.localStorage.removeItem('connectedWallets');
     }
   };
 

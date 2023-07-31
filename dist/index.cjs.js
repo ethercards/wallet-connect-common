@@ -623,7 +623,7 @@ var Web3Manager = function Web3Manager(props) {
       var label = _ref.label;
       return label;
     });
-    window.sessionStorage.setItem('connectedWallets', JSON.stringify(connectedWalletsLabelArray));
+    window.localStorage.setItem('connectedWallets', JSON.stringify(connectedWalletsLabelArray));
   }, [connectedWallets, wallet]);
   React.useEffect(function () {
     _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
@@ -635,7 +635,7 @@ var Web3Manager = function Web3Manager(props) {
               _context.next = 6;
               break;
             }
-            previouslyConnectedWallets = JSON.parse(window.sessionStorage.getItem('connectedWallets'));
+            previouslyConnectedWallets = JSON.parse(window.localStorage.getItem('connectedWallets'));
             if (!(previouslyConnectedWallets !== null && previouslyConnectedWallets !== void 0 && previouslyConnectedWallets.length)) {
               _context.next = 5;
               break;
@@ -687,7 +687,7 @@ var Web3Manager = function Web3Manager(props) {
     if (onboard) {
       disconnect(wallet);
       setChainId(null);
-      window.sessionStorage.removeItem('connectedWallets');
+      window.localStorage.removeItem('connectedWallets');
     }
   };
   var getProvider = function getProvider(contractChainId) {
