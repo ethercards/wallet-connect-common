@@ -7,3 +7,6 @@ import { WalletConnectContextProvider } from 'connectwallet-component' - where u
 after this, u can use the context like this:
 import { WalletConnectContext } from 'connectwallet-component';
 const { address, handleConnect, handleDisconnect } = WalletConnectContext();
+
+///
+The component provides the saving of the wallet into the localstorage!!
