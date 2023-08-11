@@ -166,9 +166,10 @@ const Web3Manager = (props) => {
           );
           if (chain != null) {
             return new ethers.providers.JsonRpcProvider(chain.rpcUrl);
-          } else {
-            toast.error(`Chain Id:${contractChainId} not supported!`);
           }
+          // else {
+          //   toast.error(`Chain Id:${contractChainId} not supported!`);
+          // }
         }
       }
     } else if (isCorrectNetwork) {

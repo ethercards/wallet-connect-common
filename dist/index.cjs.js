@@ -5,7 +5,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 var ethers = require('ethers');
 var React = require('react');
 var spinnersReact = require('spinners-react');
-var reactToast = require('react-toast');
+require('react-toast');
 var react = require('@web3-onboard/react');
 var injectedModule = require('@web3-onboard/injected-wallets');
 var walletConnectModule = require('@web3-onboard/walletconnect');
@@ -703,9 +703,10 @@ var Web3Manager = function Web3Manager(props) {
           });
           if (chain != null) {
             return new ethers.ethers.providers.JsonRpcProvider(chain.rpcUrl);
-          } else {
-            reactToast.toast.error("Chain Id:".concat(contractChainId, " not supported!"));
           }
+          // else {
+          //   toast.error(`Chain Id:${contractChainId} not supported!`);
+          // }
         }
       }
     } else if (isCorrectNetwork) {

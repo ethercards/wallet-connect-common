@@ -1,7 +1,7 @@
 import { ethers } from 'ethers';
 import React, { createContext, useMemo, useState, useEffect, useContext } from 'react';
 import { SpinnerCircular } from 'spinners-react';
-import { toast } from 'react-toast';
+import 'react-toast';
 import { init, useConnectWallet, useSetChain, useWallets } from '@web3-onboard/react';
 import injectedModule from '@web3-onboard/injected-wallets';
 import walletConnectModule from '@web3-onboard/walletconnect';
@@ -687,9 +687,10 @@ var Web3Manager = function Web3Manager(props) {
           });
           if (chain != null) {
             return new ethers.providers.JsonRpcProvider(chain.rpcUrl);
-          } else {
-            toast.error("Chain Id:".concat(contractChainId, " not supported!"));
           }
+          // else {
+          //   toast.error(`Chain Id:${contractChainId} not supported!`);
+          // }
         }
       }
     } else if (isCorrectNetwork) {
