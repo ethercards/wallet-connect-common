@@ -13,8 +13,12 @@ class Web3Onboard {
   constructor(props) {
     console.log(props, ' propppp');
     console.log('web4onboaaaard');
+    const wcV2InitOptions = {
+      projectId: '53da6fff931d53d90a43fab6bbefedd0',
+      version: 2,
+    }
     const injected = injectedModule();
-    const walletConnect = walletConnectModule();
+    const walletConnect = walletConnectModule(wcV2InitOptions);
     const mew = mewModule();
     const ledger = ledgerModule();
     const torus = torusModule();

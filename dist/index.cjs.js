@@ -452,8 +452,12 @@ var Web3Onboard = /*#__PURE__*/function () {
     _classCallCheck(this, Web3Onboard);
     console.log(props, ' propppp');
     console.log('web4onboaaaard');
+    var wcV2InitOptions = {
+      projectId: '53da6fff931d53d90a43fab6bbefedd0',
+      version: 2
+    };
     var injected = injectedModule__default["default"]();
-    var walletConnect = walletConnectModule__default["default"]();
+    var walletConnect = walletConnectModule__default["default"](wcV2InitOptions);
     var mew = mewModule__default["default"]();
     var ledger = ledgerModule__default["default"]();
     var torus = torusModule__default["default"]();
