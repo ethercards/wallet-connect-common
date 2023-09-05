@@ -452,12 +452,18 @@ var Web3Onboard = /*#__PURE__*/function () {
     _classCallCheck(this, Web3Onboard);
     console.log(props, ' propppp');
     console.log('web4onboaaaard');
-    var wcV2InitOptions = {
-      projectId: '53da6fff931d53d90a43fab6bbefedd0',
-      version: 2
-    };
     var injected = injectedModule__default["default"]();
-    var walletConnect = walletConnectModule__default["default"](wcV2InitOptions);
+    var walletConnect = walletConnectModule__default["default"]({
+      version: 2,
+      // **New Param** Defaults to version: 1 - this behavior will be deprecated after the WalletConnect v1 sunset
+      handleUri: function handleUri(uri) {
+        return console.log(uri);
+      },
+      projectId: props.config.WALLETCONNECT_PROJECT_ID,
+      // ***New Param* Project ID associated with [WalletConnect account](https://cloud.walletconnect.com)
+      requiredChains: [1, 137, 5, 11155111] // chains required to be supported by WC wallet
+    });
+
     var mew = mewModule__default["default"]();
     var ledger = ledgerModule__default["default"]();
     var torus = torusModule__default["default"]();
